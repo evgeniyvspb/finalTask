@@ -9,10 +9,10 @@ for (int i = 0; i < number; i++)
 int correct = 0; // создаём массив с нужным количеством элементов
 for (int i = 0; i < number; i++)
 {
-    if (Size(matrix[i]) < 4) correct++;
+    if (Size(matrix[i]) < 4) correct++; // 4 так как в задаче сказано что не более 3 элементов. Магическое число конечно, но и такова уж задача
 }
 string[] matrixExit = new string[correct]; // матрица в которую мы запишем значение удовлетворяющие услвовию
-int countForMatrixExit = 0;
+int countForMatrixExit = 0; 
 for (int i = 0; i<number; i++)
 {
     if (Size(matrix[i]) < 4)
