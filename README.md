@@ -1,39 +1,17 @@
-Console.WriteLine("Введите количество элементов в массиве: ");
-int number = int.Parse(Console.ReadLine());
-string[] matrix = new int[number];
-for (int i = 0; number-1; i++)
-{
-    Console.WriteLine($"Введите {i+1} значение массива: ");
-    matrix[i] = Console.ReadLine();
-}
-int correct =0;
-for (int i = 0; number-1; i++)
-{
-    if (matrix.Length[i]<4) correct++;
-}
-string[] matrixExit = new int[correct]; // матрица в которую мы запишем значение удовлетворяющие услвовию
-int countForMatrixExit = 0;
-for (int i = 0; number-1; i++)
-{
-    if (matrix.Length[i]<4) 
-    {
-        matrixExit[countForMatrixExit] = matrix.Length[i];
-        countForMatrixExit++;
-    }
-}
- 
-PrintArray[matrix];
-Console.Write("->");
-PrintArray[matrixExit];
- 
-void PrintArray(string[] array)
-{
-    Console.Write("[");
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (i < array.Length-1) Console.Write(array[i]+",");
-        else Console.Write(array[i]);
- 
-    }
-    Console.Write("]");
-}
+# Выполнение финальной задачи 
+## 1. Заполняем массив
+
+Чтобы создать массив для заполннеия, спросим у пользователя сколько будет элементов
+После чего последовательно по каждому элементу будем спрашивать значение этого элемента
+
+## 2. Создаём массив с элементами до 3 штук 
+С помощью цыкла пробежимся по каждому элементу массива и посомтрим какова его длинна. Если найдём элемент с длинной 3 и менее, то добавим единичку с счётчику. На выходе получим значение счётчика - сколько нам нужно иметь элементов в новом массиве
+
+## 3. Копирование значений из старого в новый
+с помощью цикла наполним новый массив элементами, удовлетворяющим условия (меньше равно 3 штук)
+```
+matrixExit[countForMatrixExit] = matrix[i];
+countForMatrixExit++;
+```
+
+Далее выведем всё на экран
